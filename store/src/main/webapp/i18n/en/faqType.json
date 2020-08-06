@@ -1,0 +1,11 @@
+{
+  "storeApp": {
+    "FaqType": {
+      "null": "",
+      "Customer": "Customer",
+      "Delivey": "Delivey",
+      "Boy": "Boy",
+      "DistributionStore": "DistributionStore"
+    }
+  }
+}

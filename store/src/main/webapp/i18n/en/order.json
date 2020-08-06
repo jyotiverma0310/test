@@ -1,0 +1,39 @@
+{
+  "storeApp": {
+    "order": {
+      "home": {
+        "title": "Orders",
+        "createLabel": "Create a new Order",
+        "createOrEditLabel": "Create or edit a Order",
+        "notFound": "No Orders found"
+      },
+      "created": "A new Order is created with identifier {{ param }}",
+      "updated": "A Order is updated with identifier {{ param }}",
+      "deleted": "A Order is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Order {{ id }}?"
+      },
+      "detail": {
+        "title": "Order"
+      },
+      "orderNo": "Order No",
+      "userId": "User Id",
+      "deliveryEmployeeId": "Delivery Employee Id",
+      "status": "Status",
+      "orderType": "Order Type",
+      "isActive": "Is Active",
+      "shippingAddress": "Shipping Address",
+      "paidTime": "Paid Time",
+      "completeTime": "Complete Time",
+      "shippmentTime": "Shippment Time",
+      "deliveryTime": "Delivery Time",
+      "cancelTime": "Cancel Time",
+      "dispatchTime": "Dispatch Time",
+      "rejectTime": "Reject Time",
+      "acceptTime": "Accept Time",
+      "note": "Note",
+      "rejectNote": "Reject Note",
+      "cancelNote": "Cancel Note"
+    }
+  }
+}

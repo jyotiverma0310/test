@@ -1,0 +1,9 @@
+{
+  "storeApp": {
+    "WalletOperationType": {
+      "null": "",
+      "Add": "Add",
+      "Subtract": "Subtract"
+    }
+  }
+}

@@ -1,0 +1,150 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-order-heading" jhiTranslate="storeApp.order.home.createOrEditLabel">Create or edit a Order</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="storeApp.order.orderNo" for="field_orderNo">Order No</label>
+                    <input type="text" class="form-control" name="orderNo" id="field_orderNo"
+                           formControlName="orderNo"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="storeApp.order.userId" for="field_userId">User Id</label>
+                    <input type="text" class="form-control" name="userId" id="field_userId"
+                           formControlName="userId"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="storeApp.order.deliveryEmployeeId" for="field_deliveryEmployeeId">Delivery Employee Id</label>
+                    <input type="text" class="form-control" name="deliveryEmployeeId" id="field_deliveryEmployeeId"
+                           formControlName="deliveryEmployeeId"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="storeApp.order.status" for="field_status">Status</label>
+                    <select class="form-control" name="status" formControlName="status" id="field_status">
+                        <option value="Shipped">{{ 'storeApp.OrderStatus.Shipped' | translate }}</option>
+                        <option value="Delivered">{{ 'storeApp.OrderStatus.Delivered' | translate }}</option>
+                        <option value="Cancelled">{{ 'storeApp.OrderStatus.Cancelled' | translate }}</option>
+                        <option value="Dispacthed">{{ 'storeApp.OrderStatus.Dispacthed' | translate }}</option>
+                        <option value="Rejected">{{ 'storeApp.OrderStatus.Rejected' | translate }}</option>
+                        <option value="Accepted">{{ 'storeApp.OrderStatus.Accepted' | translate }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="storeApp.order.orderType" for="field_orderType">Order Type</label>
+                    <select class="form-control" name="orderType" formControlName="orderType" id="field_orderType">
+                        <option value="PickUp">{{ 'storeApp.OrderType.PickUp' | translate }}</option>
+                        <option value="Delivery">{{ 'storeApp.OrderType.Delivery' | translate }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="storeApp.order.isActive" for="field_isActive">Is Active</label>
+                    <input type="checkbox" class="form-control" name="isActive" id="field_isActive"
+                           formControlName="isActive"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="storeApp.order.shippingAddress" for="field_shippingAddress">Shipping Address</label>
+                    <input type="text" class="form-control" name="shippingAddress" id="field_shippingAddress"
+                           formControlName="shippingAddress"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="storeApp.order.paidTime" for="field_paidTime">Paid Time</label>
+                    <div class="d-flex">
+                        <input id="field_paidTime" type="datetime-local" class="form-control" name="paidTime" formControlName="paidTime" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="storeApp.order.completeTime" for="field_completeTime">Complete Time</label>
+                    <div class="d-flex">
+                        <input id="field_completeTime" type="datetime-local" class="form-control" name="completeTime" formControlName="completeTime" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="storeApp.order.shippmentTime" for="field_shippmentTime">Shippment Time</label>
+                    <div class="d-flex">
+                        <input id="field_shippmentTime" type="datetime-local" class="form-control" name="shippmentTime" formControlName="shippmentTime" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="storeApp.order.deliveryTime" for="field_deliveryTime">Delivery Time</label>
+                    <div class="d-flex">
+                        <input id="field_deliveryTime" type="datetime-local" class="form-control" name="deliveryTime" formControlName="deliveryTime" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="storeApp.order.cancelTime" for="field_cancelTime">Cancel Time</label>
+                    <div class="d-flex">
+                        <input id="field_cancelTime" type="datetime-local" class="form-control" name="cancelTime" formControlName="cancelTime" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="storeApp.order.dispatchTime" for="field_dispatchTime">Dispatch Time</label>
+                    <div class="d-flex">
+                        <input id="field_dispatchTime" type="datetime-local" class="form-control" name="dispatchTime" formControlName="dispatchTime" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="storeApp.order.rejectTime" for="field_rejectTime">Reject Time</label>
+                    <div class="d-flex">
+                        <input id="field_rejectTime" type="datetime-local" class="form-control" name="rejectTime" formControlName="rejectTime" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="storeApp.order.acceptTime" for="field_acceptTime">Accept Time</label>
+                    <div class="d-flex">
+                        <input id="field_acceptTime" type="datetime-local" class="form-control" name="acceptTime" formControlName="acceptTime" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="storeApp.order.note" for="field_note">Note</label>
+                    <input type="text" class="form-control" name="note" id="field_note"
+                           formControlName="note"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="storeApp.order.rejectNote" for="field_rejectNote">Reject Note</label>
+                    <input type="text" class="form-control" name="rejectNote" id="field_rejectNote"
+                           formControlName="rejectNote"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="storeApp.order.cancelNote" for="field_cancelNote">Cancel Note</label>
+                    <input type="text" class="form-control" name="cancelNote" id="field_cancelNote"
+                           formControlName="cancelNote"/>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

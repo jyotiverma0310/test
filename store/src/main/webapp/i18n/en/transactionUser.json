@@ -1,0 +1,9 @@
+{
+  "storeApp": {
+    "TransactionUser": {
+      "null": "",
+      "Employee": "Employee",
+      "Client": "Client"
+    }
+  }
+}

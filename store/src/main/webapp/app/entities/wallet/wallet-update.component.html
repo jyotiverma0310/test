@@ -1,0 +1,58 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-wallet-heading" jhiTranslate="storeApp.wallet.home.createOrEditLabel">Create or edit a Wallet</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="storeApp.wallet.orderId" for="field_orderId">Order Id</label>
+                    <input type="text" class="form-control" name="orderId" id="field_orderId"
+                           formControlName="orderId"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="storeApp.wallet.currentTotal" for="field_currentTotal">Current Total</label>
+                    <input type="number" class="form-control" name="currentTotal" id="field_currentTotal"
+                           formControlName="currentTotal"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="storeApp.wallet.currentReedem" for="field_currentReedem">Current Reedem</label>
+                    <input type="number" class="form-control" name="currentReedem" id="field_currentReedem"
+                           formControlName="currentReedem"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="storeApp.wallet.amount" for="field_amount">Amount</label>
+                    <input type="number" class="form-control" name="amount" id="field_amount"
+                           formControlName="amount"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="storeApp.wallet.operation" for="field_operation">Operation</label>
+                    <select class="form-control" name="operation" formControlName="operation" id="field_operation">
+                        <option value="Add">{{ 'storeApp.WalletOperationType.Add' | translate }}</option>
+                        <option value="Subtract">{{ 'storeApp.WalletOperationType.Subtract' | translate }}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

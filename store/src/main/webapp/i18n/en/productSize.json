@@ -1,0 +1,10 @@
+{
+  "storeApp": {
+    "ProductSize": {
+      "null": "",
+      "Small": "Small",
+      "Medium": "Medium",
+      "Large": "Large"
+    }
+  }
+}

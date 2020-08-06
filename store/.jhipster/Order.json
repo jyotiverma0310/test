@@ -1,0 +1,91 @@
+{
+  "name": "Order",
+  "fields": [
+    {
+      "fieldName": "orderNo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "userId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "deliveryEmployeeId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "OrderStatus",
+      "fieldValues": "Shipped,Delivered,Cancelled,Dispacthed,Rejected,Accepted"
+    },
+    {
+      "fieldName": "orderType",
+      "fieldType": "OrderType",
+      "fieldValues": "PickUp,Delivery"
+    },
+    {
+      "fieldName": "isActive",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "shippingAddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "paidTime",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "completeTime",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "shippmentTime",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "deliveryTime",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "cancelTime",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "dispatchTime",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "rejectTime",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "acceptTime",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "note",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "rejectNote",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "cancelNote",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20200804142703",
+  "entityTableName": "order",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": ["store"]
+}

@@ -1,0 +1,9 @@
+{
+  "storeApp": {
+    "OrderType": {
+      "null": "",
+      "PickUp": "PickUp",
+      "Delivery": "Delivery"
+    }
+  }
+}

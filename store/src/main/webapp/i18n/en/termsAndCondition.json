@@ -1,0 +1,23 @@
+{
+  "storeApp": {
+    "termsAndCondition": {
+      "home": {
+        "title": "Terms And Conditions",
+        "createLabel": "Create a new Terms And Condition",
+        "createOrEditLabel": "Create or edit a Terms And Condition",
+        "notFound": "No Terms And Conditions found"
+      },
+      "created": "A new Terms And Condition is created with identifier {{ param }}",
+      "updated": "A Terms And Condition is updated with identifier {{ param }}",
+      "deleted": "A Terms And Condition is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Terms And Condition {{ id }}?"
+      },
+      "detail": {
+        "title": "Terms And Condition"
+      },
+      "note": "Note",
+      "isActive": "Is Active"
+    }
+  }
+}

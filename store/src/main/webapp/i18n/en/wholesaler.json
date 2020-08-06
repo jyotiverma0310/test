@@ -1,0 +1,23 @@
+{
+  "storeApp": {
+    "wholesaler": {
+      "home": {
+        "title": "Wholesalers",
+        "createLabel": "Create a new Wholesaler",
+        "createOrEditLabel": "Create or edit a Wholesaler",
+        "notFound": "No Wholesalers found"
+      },
+      "created": "A new Wholesaler is created with identifier {{ param }}",
+      "updated": "A Wholesaler is updated with identifier {{ param }}",
+      "deleted": "A Wholesaler is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Wholesaler {{ id }}?"
+      },
+      "detail": {
+        "title": "Wholesaler"
+      },
+      "name": "Name",
+      "userId": "User Id"
+    }
+  }
+}

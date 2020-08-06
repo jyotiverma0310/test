@@ -1,0 +1,23 @@
+{
+  "storeApp": {
+    "distributionStore": {
+      "home": {
+        "title": "Distribution Stores",
+        "createLabel": "Create a new Distribution Store",
+        "createOrEditLabel": "Create or edit a Distribution Store",
+        "notFound": "No Distribution Stores found"
+      },
+      "created": "A new Distribution Store is created with identifier {{ param }}",
+      "updated": "A Distribution Store is updated with identifier {{ param }}",
+      "deleted": "A Distribution Store is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Distribution Store {{ id }}?"
+      },
+      "detail": {
+        "title": "Distribution Store"
+      },
+      "name": "Name",
+      "userId": "User Id"
+    }
+  }
+}

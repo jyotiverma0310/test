@@ -1,0 +1,9 @@
+{
+  "storeApp": {
+    "ProductType": {
+      "null": "",
+      "Regular": "Regular",
+      "Bundle": "Bundle"
+    }
+  }
+}

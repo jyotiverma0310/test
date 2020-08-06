@@ -1,0 +1,34 @@
+{
+  "name": "Faq",
+  "fields": [
+    {
+      "fieldName": "type",
+      "fieldType": "FaqType",
+      "fieldValues": "Customer,Delivey,Boy,DistributionStore"
+    },
+    {
+      "fieldName": "question",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "answer",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isActive",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20200804143103",
+  "entityTableName": "faq",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": ["store"]
+}

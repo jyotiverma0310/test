@@ -1,0 +1,25 @@
+{
+  "storeApp": {
+    "addOnProduct": {
+      "home": {
+        "title": "Add On Products",
+        "createLabel": "Create a new Add On Product",
+        "createOrEditLabel": "Create or edit a Add On Product",
+        "notFound": "No Add On Products found"
+      },
+      "created": "A new Add On Product is created with identifier {{ param }}",
+      "updated": "A Add On Product is updated with identifier {{ param }}",
+      "deleted": "A Add On Product is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Add On Product {{ id }}?"
+      },
+      "detail": {
+        "title": "Add On Product"
+      },
+      "name": "Name",
+      "isActive": "Is Active",
+      "price": "Price",
+      "productCategoryId": "Product Category Id"
+    }
+  }
+}

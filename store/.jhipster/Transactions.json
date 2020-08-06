@@ -1,0 +1,39 @@
+{
+  "name": "Transactions",
+  "fields": [
+    {
+      "fieldName": "orderId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "amount",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "transactionType",
+      "fieldType": "TransactionType",
+      "fieldValues": "Credit,Debit"
+    },
+    {
+      "fieldName": "transactionUser",
+      "fieldType": "TransactionUser",
+      "fieldValues": "Employee,Client"
+    },
+    {
+      "fieldName": "userId",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20200804143403",
+  "entityTableName": "transactions",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": ["store"]
+}

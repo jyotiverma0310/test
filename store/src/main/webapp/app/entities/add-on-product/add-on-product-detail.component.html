@@ -1,0 +1,42 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="addOnProduct">
+            <h2><span jhiTranslate="storeApp.addOnProduct.detail.title">Add On Product</span> {{ addOnProduct.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="storeApp.addOnProduct.name">Name</span></dt>
+                <dd>
+                    <span>{{ addOnProduct.name }}</span>
+                </dd>
+                <dt><span jhiTranslate="storeApp.addOnProduct.isActive">Is Active</span></dt>
+                <dd>
+                    <span>{{ addOnProduct.isActive }}</span>
+                </dd>
+                <dt><span jhiTranslate="storeApp.addOnProduct.price">Price</span></dt>
+                <dd>
+                    <span>{{ addOnProduct.price }}</span>
+                </dd>
+                <dt><span jhiTranslate="storeApp.addOnProduct.productCategoryId">Product Category Id</span></dt>
+                <dd>
+                    <span>{{ addOnProduct.productCategoryId }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/add-on-product', addOnProduct.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

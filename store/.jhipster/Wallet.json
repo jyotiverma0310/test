@@ -1,0 +1,38 @@
+{
+  "name": "Wallet",
+  "fields": [
+    {
+      "fieldName": "orderId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "currentTotal",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "currentReedem",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "amount",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "operation",
+      "fieldType": "WalletOperationType",
+      "fieldValues": "Add,Subtract"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20200804142603",
+  "entityTableName": "wallet",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": ["store"]
+}

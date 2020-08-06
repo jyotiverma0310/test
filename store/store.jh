@@ -1,0 +1,262 @@
+application {
+	config {
+    	applicationType monolith
+        authenticationType jwt
+    	baseName store        
+        buildTool maven
+        cacheProvider hazelcast
+        databaseType mongodb
+        devDatabaseType mongodb
+        languages [en]
+        packageName com.matellio.store
+        serverPort 8080        
+        serviceDiscoveryType eureka        
+    	prodDatabaseType mongodb
+    }
+    entities Wholesaler, DistributionStore, User, UserLocation, Product, ProductCategory, ProductSubCategory, AddOnProduct, Wallet, Notification, Order, Wallet, ContactUs, Faq, TermsAndCondition, AboutUs, Transactions
+}
+
+dto * with mapstruct
+service * with serviceImpl
+paginate * with pagination
+
+entity Wholesaler {
+	name String
+    userId String
+}
+
+entity DistributionStore {
+	name String
+    userId String
+}
+
+entity User {
+	firstName String required
+    lastName String
+    email String required unique
+    primaryPhoneNumber String 
+    secondayPhoneNumber String
+    image String
+    status Boolean
+    isEmailVerified Boolean
+    gender Gender
+    profilePicture String  
+    isUserBanned String
+    //identification Identification 
+    //accountDetails AccountDetails
+}
+
+entity EmployeeInfo {
+	isAvailable Boolean
+}
+
+enum AddressType {
+	Home, Office, Other
+}
+
+entity Address {
+	address String
+    city String
+    state String
+    country String
+    zipCode String
+    type AddressType
+}
+
+enum Gender {
+    MALE, FEMALE, OTHER
+}
+
+entity Identification {
+	driverLicense String
+    driverLicenseImage String
+    residentProofImage String
+}
+
+entity AccountDetails {
+	bankName String
+    bankCode String
+    accountNumber String
+}
+
+entity UserLocation {
+	userId String
+    latitude String
+    longitude String
+}
+
+entity Product {
+	name String
+	productType ProductType
+    productCategoryId String
+    price BigDecimal
+    isActive Boolean
+    productSize ProductSize
+}
+
+enum ProductType {
+	Regular, Bundle
+}
+
+enum ProductSize {
+	Small, Medium, Large
+}
+
+entity ProductCategory {
+	name String
+    isActive Boolean
+}
+
+entity ProductSubCategory {
+	name String
+    isActive Boolean
+}
+
+entity AddOnProduct {
+	name String
+    isActive Boolean
+    price BigDecimal
+    productCategoryId String
+}
+
+enum NotificationType {
+	OrderAccept
+    OrderDispatch
+    OrderDeliver
+    NewProduct
+    Advertising
+    AppUpdate
+    CheckIn
+    CheckOut
+}
+
+entity Notification {
+	name String required
+    message String required
+    notificationType NotificationType required
+    notificationImage String
+}
+
+enum WalletOperationType {
+	Add
+    Subtract
+}
+
+entity Wallet {
+	orderId String
+    currentTotal BigDecimal
+    currentReedem BigDecimal
+    amount BigDecimal
+    operation WalletOperationType
+}
+
+enum OrderStatus {
+	Shipped 
+    Delivered
+    Cancelled
+    Dispacthed
+    Rejected
+    Accepted
+}
+
+enum PaymentOption {
+	COD, Online
+}
+
+enum OrderType {
+	PickUp, Delivery
+}
+
+entity Order {
+	orderNo String
+    userId String
+    deliveryEmployeeId String
+    status OrderStatus
+    orderType OrderType
+    isActive Boolean
+    shippingAddress String
+    paidTime Instant
+    completeTime Instant
+    shippmentTime Instant
+    deliveryTime Instant
+    cancelTime Instant
+    dispatchTime Instant
+    rejectTime Instant
+    acceptTime Instant
+    note String
+    rejectNote String
+    cancelNote String
+}
+
+entity Cart {
+	paymentOption PaymentOption
+    total BigDecimal
+    totalDiscount BigDecimal
+    deliveryFee BigDecimal
+    enableDeliveryFee Boolean
+    deliveryDiscount BigDecimal
+    deliveryPromotionId String
+    cartDiscount BigDecimal
+    subTotal BigDecimal
+}
+
+enum DiscountType {
+	Cash, Percentage
+}
+
+entity CartItems {
+	productId String
+    discountType DiscountType
+    promoCode String
+    promotionIds String 
+    total BigDecimal
+    subTotal BigDecimal
+    cost BigDecimal
+    discount BigDecimal
+    addOnProductIds String
+    addOnPrice BigDecimal
+}
+
+entity ContactUs {
+	name String
+    email String
+    phoneNumber String
+    message String
+}
+
+enum FaqType {
+	Customer, Delivey Boy, DistributionStore
+}
+
+entity Faq {
+	type FaqType
+    question String
+    answer String
+    isActive Boolean
+}
+
+entity TermsAndCondition {
+	note String
+    isActive Boolean
+}
+
+entity AboutUs {
+	note String
+    isActive Boolean
+}
+
+enum TransactionUser {
+	Employee, Client
+}
+
+enum TransactionType {
+	Credit, Debit
+}
+
+entity Transactions {
+	orderId String
+    amount BigDecimal
+    transactionType TransactionType
+    transactionUser TransactionUser
+    userId String
+}

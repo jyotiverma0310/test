@@ -1,0 +1,9 @@
+{
+  "storeApp": {
+    "TransactionType": {
+      "null": "",
+      "Credit": "Credit",
+      "Debit": "Debit"
+    }
+  }
+}
